@@ -1,0 +1,546 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    margin-top: 100px;
+}
+
+/*1. Header  */
+
+.header{
+    width: 100%;
+    height: 65px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+    position:fixed;
+    top:0px;
+    /* When you hover the item, it does not float over the heading. So use z-index:10 */
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    /* border: #333 1px solid; */
+    
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+    height: 65px;
+    /* align-self: center; */
+    padding-top: 12px;
+    color: #ff523b;
+    /* border: 2px solid #f3a806; */
+}
+
+.container1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* border: 2px solid #f3a806; */
+    
+    
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    /* border: 2px solid #0e0b05; */
+}
+
+li a{
+    text-decoration: none;
+    color: #555555;
+    font-size: 16px;
+    padding: 10px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+li a:hover{
+    background-color: #f3a806;
+    color: white;
+    border-radius: 5px;
+}
+
+.fa-bag-shopping{
+    font-size: 24px;
+    color: #555555;
+    
+}
+
+.fa-bars{
+    font-size: 24px;
+    color: #555555;
+}
+#hamburger{
+    display: none;
+}
+
+/* Responsive Design */
+
+
+
+@media (max-width: 800px) {
+    nav ul{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 65px;
+        right: 20px;
+        width: 45%;
+        line-height:2;
+        background-color: rgb(24, 23, 23);
+        border-radius: 5px;
+        padding: 10px;
+        color: #fff;
+    }
+
+    li a{
+    text-decoration: none;
+    color: #fbfafa;
+    font-size: 16px;
+    padding: 10px 10px;
+    
+}
+
+    nav ul.active {
+        display: flex;
+      }
+
+    #hamburger{
+        display: block;
+        padding-top: 5px;
+        /* border: 2px solid red; */
+    }
+    .container1{
+        /* border: 2px solid red; */
+        gap: 10px;
+    }
+    .header{
+        padding: 20px 20px;
+    }
+    
+}
+
+ 
+
+
+/*2. Hero Section */
+
+.hero-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+    width: 90%;
+    margin: 20px auto;
+
+}
+
+.text{
+    /* border: 2px solid rgb(113, 35, 35); */
+    
+    width: 50%;
+
+}
+h1{
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+p{
+    font-size: 20px;
+    line-height:2;
+    margin-bottom: 40px;
+}
+
+button{
+border-radius: 10px;
+height: 35px;
+width: 150px;
+font-size: 18px;
+background-color: #ff523b;
+color: white;
+border: none;
+}
+
+button:hover{
+    background-color: #ca6920;
+    transition: all 0.3s ease;
+}
+
+.picture{
+    width: 50%;
+    /* border: 2px solid rgb(135, 115, 41); */
+
+}
+.pic{
+    padding: 40px;
+    /* border: 2px solid #ff523b; */
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 800px){
+    .hero-section{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+    }
+    .text{
+        text-align: center;
+        padding: 0;
+        width: 100%;
+    }
+    h1{
+        font-size: 25px;
+    }
+    p{
+        font-size: 18px;
+    }
+    .picture{
+        width: 100%;
+    }
+    .pic {
+        padding: 0;
+    }
+    img{
+        width: 100%;
+        padding: 0;
+        /* border: #ff523b 2px solid; */
+    }
+
+}
+
+
+/*3. Category */
+
+.category{
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin: auto;
+    /* border: 2px solid red; */
+}
+
+.category-image{
+    width: 28% ;
+    /* border: 2px solid rgb(89, 255, 0); */
+}
+img{
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    .category{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .category-image{
+        min-width: 230px;
+        margin: 10px 1px;
+    }
+}
+
+
+/*4. Featured Product */
+
+.h-product{
+    text-align: center;
+    padding: 40px;
+    color: rgb(255, 94, 0);
+}
+
+.row-4{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    /* border: 2px solid red; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.product-item{
+    width: 23%;
+    transition: all 0.3s ease;
+    /* background-color: blue; */
+    min-width: 220px;
+    margin: 0 auto;
+
+}
+
+.product-item:hover{
+    transform: scale(1.1);
+    /* transform: translateY(-10px); */
+    z-index: 1;
+    position: relative;
+}
+
+.product-image img{
+    width: 100%;
+    
+}
+
+.product-title{
+    font-size: 15px;
+    margin: auto;
+    
+}
+
+
+.fa-star{
+    color: rgb(255, 81, 0);
+}
+
+.fa-star-half-stroke{
+    color: rgb(255, 81, 0);
+}
+
+
+footer {
+  display: flex;
+  height: 70px;
+  background-color: #131111;
+  justify-content: center;
+ 
+ padding: 20px 0px;
+}
+.p-footer {
+  
+  color:white;
+  font-size: 14px;
+  text-align: center;
+  /* justify-items: cente; */
+
+  /* border: 2px solid #ff5e3a; */
+  
+}
+
+.all-product{
+    /* border: 2px solid red; */
+    width: 30%;
+    margin: 50px;
+    color: rgb(39, 37, 37);
+}
+
+/* Box for more */
+
+.box{
+  width: 30%;
+  height: 5%;
+  display: flex;
+  margin: 50px 50px;
+  justify-content: space-evenly;
+  /* border: 2px solid #ff5e3a; */
+  
+}
+
+.box1{
+  display: flex;
+  width: 40px;
+  height:40px;
+  border: 2px solid #ff5e3a;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+
+}
+
+.box1:hover{
+  background-color: #ff5e3a;
+  color: white;
+  transform: scale(1.1);
+  
+}
+
+/* Responsive Design */
+
+/* @media (max-width: 800px){
+    .row-4{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .product-item{
+        min-width: 220px;
+    }
+} */
+
+
+/* 5. About */
+.about{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    border: 2px solid grey;
+}
+
+
+.about-title{
+    text-align: center;
+    width: 45%;
+    margin: auto;
+    font-size: 25px;
+    border-radius: 10px;
+    transition: all 0.2s linear;
+    color: rgb(41, 40, 40);
+}
+
+.about-title:hover{
+    background-color: rgb(255, 42, 0);
+    color:white;
+    transform:scale(1.1)
+}
+
+.about-text{
+    margin: 40px;
+    
+}
+
+
+/* 6. Contact */
+
+
+.contact-title{
+    text-align: center;
+    color: rgb(55, 51, 51);
+}
+form {
+  width: 53%;
+  height: auto;
+  margin: auto;
+  padding: 20px;
+  
+  
+  /* justify-content: center; */
+  
+  /* border: 2px solid #ff5e3a; */
+}
+label, input {
+  display: flex;
+  
+  width: 100%;
+  height: 33px;
+  margin: 10px;
+  padding: 10px;
+  
+}
+textarea {
+  width: 100%;
+  height: 45px;
+  margin: 10px;
+  border: #595656 1px solid;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+.btn2 {
+  width: 25%;
+  height: 40px;
+  background-color: white;
+  color:#ff5e3a;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border-radius: 5px;
+  border: 2px solid #ff5e3a;
+  
+}
+.btn2:hover {
+  background-color: #ff5e3a;
+  color: white;
+  transition: 0.3s ease;
+}
+
+
+/* 7. Cart */
+
+table {
+  width: 100%;
+  height: auto;
+  border-collapse: collapse;
+  margin: 20px auto;
+  /* border: 2px solid #ff5e3a; */
+}
+th {
+  padding: 10px;
+  text-align: center;
+  font-weight: 600;
+  color: white;
+  background-color: rgb(255, 85, 0);
+}
+/* td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ff5e3a;
+} */
+
+.td1{
+  width: 70%;
+  display: flex;
+  padding: 20px;
+  /* border: 1px solid #ff5e3a; */
+}
+.pro-img{
+width: 70px;
+}
+.pro-price {
+  font-weight: 300;
+  padding-left: 20px;
+  text-align: start;
+  line-height: 1.8;
+}
+
+._input{
+  
+  width: 50px;
+  height: 30px;
+  margin: auto;
+  border-radius: 5px;
+  border: 1px solid #111110;
+}
+
+.price{
+  font-weight: 600;
+  color: #ff5e3a;
+  text-align: center;
+}
+i{
+  color: #ff5e3a;
+  font-size: 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+i:hover{
+  color: #ff5e3a;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.line {
+ 
+  /* background-color: #ff5e3a; */
+  border-bottom: 3px solid rgb(255, 123, 0);
+}
+
+.td2 {
+  text-align: center;
+  line-height: 3;
+  /* border: 1px solid #ff5e3a; */
+}
